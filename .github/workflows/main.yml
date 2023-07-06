@@ -14,7 +14,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Embed version in Dockerfile
-      run: sed -i "s/version=dev/version=${{ github.event.inputs.version }}/" Dockerfile
+      run: sed -i "s/version=dev/version=${{ github.event.inputs.version }}/" /cart/Dockerfile
     - name: Embed version in README.md
       run: sed -i "s/%%version%%/${{ github.event.inputs.version }}/" README.md
     - name: Create and push release commit and tag
