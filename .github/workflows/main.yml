@@ -1,0 +1,2 @@
+- name: Instana Release
+  uses: taimos/github-action-instana-release@v3
