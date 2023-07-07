@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: taimos/github-action-instana-release@%%version%%
+      uses: actions/checkout@v2
     - name: Embed version in Dockerfile
       run: sed -i "s/version=dev/version=${{ github.event.inputs.version }}/" Dockerfile
     - name: Embed version in README.md
