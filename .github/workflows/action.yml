@@ -11,19 +11,7 @@ inputs:
   releaseScope: >
     {
   "applications": [
-    { "name": "My Awesome App" },
-    { "name": "My Even More Awesome App" }
-  ],
-  "services": [
-    { "name": "Cool service #1" },
-    {
-      "name": "Cool service #2",
-      "scopedTo": {
-        "applications": [
-          { "name": "My Cool App" }
-        ]
-      }
-    }
+    { "name": "Nick-robotshop" }
   ]
 }
 outputs:
