@@ -1,0 +1,37 @@
+# action.yml
+name: 'Instana Release'
+description: 'Create a release marker in Instana with the given name'
+branding:
+  icon: bookmark
+  color: blue
+inputs:
+  releaseName:
+    description: 'Name of the release'
+    required: true
+  releaseScope: >
+    {
+  "applications": [
+    { "name": "My Awesome App" },
+    { "name": "My Even More Awesome App" }
+  ],
+  "services": [
+    { "name": "Cool service #1" },
+    {
+      "name": "Cool service #2",
+      "scopedTo": {
+        "applications": [
+          { "name": "My Cool App" }
+        ]
+      }
+    }
+  ]
+}
+outputs:
+  timide:
+    description: 'Release id'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.releaseName }}
+    - ${{ inputs.releaseScope }}
