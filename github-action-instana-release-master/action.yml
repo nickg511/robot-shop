@@ -10,15 +10,9 @@ inputs:
     required: true
   releaseScope: >
     {
-      "services": [
-        {
-          "name": "cart",
-          "scopedTo": {
-            "applications": [{ "name": "Nick-robotshop" }]
-          }
-        },
-        { "name": "spring-boot" }
-      ]
+  "applications": [
+    { "name": "Nick-robotshop" },
+  ],
     }
 outputs:
   timide:
