@@ -8,10 +8,18 @@ inputs:
   releaseName:
     description: 'Name of the release'
     required: true
-  releaseScope:
-    description: 'Scope of the release'
-    required: false
-    default: '{}'
+  releaseScope: >
+    {
+      "services": [
+        {
+          "name": "cart",
+          "scopedTo": {
+            "applications": [{ "name": "Nick-robotshop" }]
+          }
+        },
+        { "name": "spring-boot" }
+      ]
+    }
 outputs:
   timide:
     description: 'Release id'
