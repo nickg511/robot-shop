@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test release
-        uses: ./robot-shop/github-action-instana-release-master/
+        uses: ./github-action-instana-release-master/
         with:
           releaseName: 'Github action test'
         env:
